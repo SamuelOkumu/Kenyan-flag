@@ -5,17 +5,23 @@ from matplotlib.patches import Rectangle
 # Creating a figure and axis
 fig, ax = plt.subplots()
 
-# Defining the coordinates as well as the sizes of the red and white patches of the flag
-red_rect = Rectangle((0, 0), 700, 350, color='red')
-white_rect = Rectangle((0, 350), 700, 150, color='white')
+# Defining the coordinates as well as the sizes of the colored patches of the flag
+black_rect = Rectangle((0, 1), 600, 50, color='black')
+white1_rect = Rectangle((0, 51), 600, 25, color='white')
+red_rect = Rectangle((0, 76), 600, 100, color='red')
+white2_rect = Rectangle((0, 176), 600, 25, color='white')
+green_rect = Rectangle((0, 201), 600, 199, color='green')
 
-# Adding the red and white sections to the axis
+# Adding the colored sections to the axis
+ax.add_patch(black_rect)
+ax.add_patch(white1_rect)
 ax.add_patch(red_rect)
-ax.add_patch(white_rect)
+ax.add_patch(white2_rect)
+ax.add_patch(green_rect)
 
 # Setting the axis limits
-ax.set_xlim([0,700])
-ax.set_ylim([0,500])
+ax.set_xlim([0,600])
+ax.set_ylim([0,400])
 
 # Displaying the Kenyan flag
 plt.show()
