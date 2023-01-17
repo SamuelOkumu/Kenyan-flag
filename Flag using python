@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
+
+# Creating a figure and axis
+fig, ax = plt.subplots()
+
+# Defining the coordinates as well as the sizes of the red and white patches of the flag
+red_rect = Rectangle((0, 0), 700, 350, color='red')
+white_rect = Rectangle((0, 350), 700, 150, color='white')
+
+# Adding the red and white sections to the axis
+ax.add_patch(red_rect)
+ax.add_patch(white_rect)
+
+# Setting the axis limits
+ax.set_xlim([0,700])
+ax.set_ylim([0,500])
+
+# Displaying the Kenyan flag
+plt.show()
